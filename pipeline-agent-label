@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+        label 'Built-In Node' // give the name of the server
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        node 
+        {
+          label "Built-In Node"
+        customWorkspace "/var/lib/Jenkins/workspace/pipeline-agent-node"  
+        }
+
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+

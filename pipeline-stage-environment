@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    environment {
+        name1 = "jan"
+        name2 = "feb"
+    }
+    stages {
+        stage('Build') {
+            environment{
+                name3 = "mar"
+            }
+            steps {
+                echo "name1 ${name1}"
+                echo "name2 ${name2}"
+                echo "name3 ${name3}"
+            }
+        }
+    }
+}
+
