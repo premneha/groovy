@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage('stages running in parallel') {
+    
+            parallel {
+                stage('stage1') {
+                    steps {
+                        echo "executing stage1"
+                        sleep 10
+                    }
+                }
+                stage('stage2') {
+                    steps {
+                        echo "executing stage2"
+                        sleep 10
+                    }
+                }
+                stage('stage3') {
+                    steps {
+                        echo "executing stage3"
+                        sleep 10
+                    }
+                }
+            }
+        }
+    }    
+}
