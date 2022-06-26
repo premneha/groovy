@@ -3,6 +3,8 @@ pipeline {
         node {
           label "slave1"
           customWorkspace "/root/Jenkins/testingbranch"
+            }
+            }
     options {
                  timestamps()
             }
@@ -25,4 +27,4 @@ pipeline {
             }
         }
     }
-}
+
